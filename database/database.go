@@ -4,9 +4,7 @@ import (
 	"log"
 	"os"
 
-	"githbub.com/atifali-pm/models"
-
-	"github.com/jinzhu/gorm"
+	"github.com/atifali-pm/go-fiber-api/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -34,7 +32,7 @@ func ConnectDb() {
 	db.AutoMigrate(&models.User{}, &models.Product{}, &models.Order{})
 
 	Database = DbInstance{
-		Db: db,
+		DB: db,
 	}
 
 }
